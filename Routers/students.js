@@ -50,10 +50,11 @@ stdRoutes.post("/mark-attendance", async (req, res) => {
 });
 
 stdRoutes.get("/get-batches", async (req, res) => {
-  const { data, error } = supabase.from("batches").select("batch");
+  const { data, error } = await supabase.from("batches").select("*");
+  console.log(data)
   if (error) {
     res.status(404).json({
-      message: "unable to feych natches",
+      message: "unable to fetch batches",
     });
   } else {
     res.status(200).json({
