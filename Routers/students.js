@@ -49,4 +49,17 @@ stdRoutes.post("/mark-attendance", async (req, res) => {
   }
 });
 
+stdRoutes.get("/get-batches", async (req, res) => {
+  const { data, error } = supabase.from("batches").select("batch");
+  if (error) {
+    res.status(404).json({
+      message: "unable to feych natches",
+    });
+  } else {
+    res.status(200).json({
+      message: "fetched data",
+      data,
+    });
+  }
+});
 export default stdRoutes;
