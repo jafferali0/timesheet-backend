@@ -1,0 +1,30 @@
+{
+  "name": "timesheet-backend",
+  "version": "1.0.0",
+  "description": "It is a backend service for the reac-native timesheet app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asahi001/timesheet-backend.git"
+  },
+  "author": "Jaffer Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asahi001/timesheet-backend/issues"
+  },
+  "homepage": "https://github.com/Asahi001/timesheet-backend#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.1",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "uuid": "^14.0.2"
+  },
+  "type": "module"
+}
